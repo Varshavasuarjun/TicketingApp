@@ -74,7 +74,7 @@ router.post('/cancelticket/:id', async(req,res)=>{
 router.post("/bookticket/:id", (req,res)=>{
     const id=req.params.id;
     console.log(id)
-    const data=req.body.name;
+    const data=req.body.seatNo;
     const token=req.body.token;
     const today=new Date();
     today.setHours(0, 0, 0, 0);
@@ -83,7 +83,7 @@ router.post("/bookticket/:id", (req,res)=>{
         "userId": req.body.userId,
         "moivieId":req.body.moivieId,
         "movieName":req.body.movieName,
-        "seatNo":req.body.name,
+        "seatNo":req.body.seatNo,
         "date":req.body.date
     }
     const useremail=req.body.email;
